@@ -23,13 +23,15 @@ public class MainActivity extends AppCompatActivity {
             greetingTextView.setAlpha(1);
 
             // TODO: exercise 9a
-            greetingTextView.setText(greetingTextView.getText().toString().replace("xxx", "\n"+userNameEditText.getText()));
+            greetingTextView.setText(userNameEditText.getText() + " este smecher!\n");
+            //greetingTextView.setText(greetingTextView.getText().toString().replace("xxx", "\n"+userNameEditText.getText()));
 
             // TODO: exercise 9b
             AlphaAnimation fadeEffect = new AlphaAnimation(1.0f, 0.0f);
             fadeEffect.setDuration(TRANSPARENCY_EFFECT_DURATION);
             fadeEffect.setFillAfter(true);
             greetingTextView.setAnimation(fadeEffect);
+            userNameEditText.setAnimation(fadeEffect);
         }
 
     }
